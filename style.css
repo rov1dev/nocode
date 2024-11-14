@@ -1,6 +1,6 @@
 :root{
     --grColor:#e9e7e7;
-    --Radius:20px;
+    --Radius:10px;
 }
 *{
     padding: 0;
@@ -18,30 +18,48 @@ body{
 }
 nav{
     top: 5px;
-    position: static;
-    width: 100%;
+    position: sticky;
+    margin: 0 auto;
+    width: 96%;
     height: 50px;
     text-align: center;
     background-color:var(--grColor) ;
-    border-radius: var(--Radius);
+    border-radius: 10px 10px 0 0;
+    z-index: 5;
 }
-aside{
+.aside{
+    overflow: hidden scroll;
     border-radius: var(--Radius);
     height: 90vh;
     background-color: var(--grColor);
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    padding: 10px 1%;
+    padding: 10px;
     text-align: center;
+    justify-content: space-between;
 }
-aside div{
+.aside div{
+    border-radius: var(--Radius);
     height: 100px;
     background-color: #fff;
     width: 100%;
 }
-section{
+.aside button{
+    height: 0;
+    background: none;
+    width: 100%;
+    border: none;
+    border-bottom:2px solid #ccc;
+}
+.aside div:nth-child(3){
+    width: 20%;
+}
+.aside div:nth-child(4){
+    width: 78%;
+}
+#document{
+    overflow: hidden scroll;
     border-radius: var(--Radius);
     width: 80%;
     height: 90vh;
