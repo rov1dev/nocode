@@ -1,0 +1,49 @@
+:root{
+    --grColor:#e9e7e7;
+    --Radius:20px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    padding: 20px 2%;
+    position: relative;
+    display: flex;
+    gap:20px;
+}
+body{
+    height: 150vh;
+}
+nav{
+    top: 5px;
+    position: static;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color:var(--grColor) ;
+    border-radius: var(--Radius);
+}
+aside{
+    border-radius: var(--Radius);
+    height: 90vh;
+    background-color: var(--grColor);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 1%;
+    text-align: center;
+}
+aside div{
+    height: 100px;
+    background-color: #fff;
+    width: 100%;
+}
+section{
+    border-radius: var(--Radius);
+    width: 80%;
+    height: 90vh;
+    background: var(--grColor);
+}
