@@ -1,14 +1,23 @@
-let componets = document.querySelectorAll('#aside div')
-let block = document.getElementById('document')
+let components = document.querySelectorAll("#aside div");
+let blockComps = document.querySelectorAll("#document .element");
+let block = document.getElementById("document");
+let activeItem = null;
+const createElement = (what) => document.createElement(what);
 
-const createEelement = (what)=>{
-    return document.createElement(what);
-}
-componets.forEach(item=>{
-    item.addEventListener('click',()=>{
-        block.appendChild(createEelement(item.getAttribute('data-value')));
-        localStorage.setItem('html', JSON.stringify(block.innerHTML));
-        console.log(JSON.parse(localStorage.getItem('html')));
-        
-    })
-})
+components.forEach((item) => {
+  item.addEventListener("click", () => {
+    const newElement = createElement(item.getAttribute("data-value"));
+    newElement.classList.add("element");
+    block.appendChild(newElement);
+
+    localStorage.setItem("html", JSON.stringify(block.innerHTML));
+    blockComps = document.querySelectorAll("#document .element");
+
+    blockComps.forEach((item) => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("togle");
+        activeItem = item;
+      });
+    });
+  });
+});
