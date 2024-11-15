@@ -9,7 +9,26 @@
   <body>
     <nav class="nav"><h1>navbar</h1></nav>
     <div id="container" class="container">
-      <div id="panel" class="side-panel"></div>
+      <div id="panel" class="side-panel non-active">
+        <form action="#">
+          <div>
+            <input type="text" placeholder="width">
+            <select name="size" id="sizeChose">
+              <option selected value="px">px</option>
+              <option value="%">%</option>
+              <option value="vh">vh</option>
+            </select>
+          </div>
+          <div>
+            <input type="text" placeholder="height">
+            <select name="size" id="sizeChose">
+              <option selected value="px">px</option>
+              <option value="%">%</option>
+              <option value="vh">vh</option>
+            </select>
+          </div>
+        </form>
+      </div>
       <aside id="aside" class="aside">
         <h2>Options</h2>
         <div data-value="navbar"><p>Navbar</p></div>

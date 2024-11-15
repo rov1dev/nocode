@@ -80,3 +80,14 @@ body{
 .togle{
     box-shadow:  0 0 10px 10px #ccc;
 }
+.side-panel{
+    transition: display 0.5s linear infinite;
+    position: fixed;
+    border-radius: 30px;
+    width: 22%;
+    height: 90vh;
+    background-color: teal;
+}
+.non-active{
+    display: none;
+}
